@@ -13,7 +13,6 @@ function Weather() {
       const tempWeather = json.properties.periods.slice(0,2);
       const tempUpdateTime = new Date(json.properties.updateTime).toLocaleTimeString();
       const tempQueryTime = new Date(json.properties.generatedAt).toLocaleTimeString();
-      console.log(json.properties);
   
   
       // create celsius temperature from fahrenheit
@@ -26,11 +25,10 @@ function Weather() {
     };  
   
     useEffect(() => {
+      setInterval(() => fetchWeather(), 300000);
       fetchWeather();
     }, []);
   
-    console.log("WEATHER");
-    console.log(weather);
     return(<div>
       <h1>WEATHER:</h1>
       {weather.map(function(weatherObj) {
