@@ -1,4 +1,5 @@
 import BusStop from './BusStop.js'
+import ProgressCircle from './ProgressCircle.js';
 import { useEffect, useState } from 'react';
 
 
@@ -38,25 +39,39 @@ function Transit() {
         tempBusStopsData[busStopId] = await fetchSingleStopDepartures(busStopId);
       };
 
-      console.log(tempBusStopsData)
       setBusStopsData(tempBusStopsData);
     };
 
+    //interval for progress circle and repeated departure fetching
+    const [timeLeft, setTimeLeft] = useState(32)
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTimeLeft(timeLeft - 1)
+      }, 1000);
+
+      if (timeLeft === 0) {
+        fetchAllDepartures();
+        setTimeLeft(32);
+      }
+      return () => {
+        clearInterval(interval)
+      }
+
+      }, [timeLeft])
+
+      // fetch departures on load
     useEffect(() => {
       fetchAllDepartures();
-      console.log("fetched departures", busStopsData)
-
-      const interval = setInterval(() => {
-        fetchAllDepartures();
-      }, 32000);
-      return () => clearInterval(interval);
     }, []);
+
 
     return(<div>
       <h1>TRANSIT</h1>
       <BusStop stopName="Hennepin & 24th - Northbound" stopId="1328" busStopData = {busStopsData["1328"]} />
       <BusStop stopName="Hennepin & 24th - Southbound" stopId="1098" busStopData = {busStopsData["1098"]} />
       <BusStop stopName="TESTING RANDO NORTH LINE" stopId="53342" busStopData = {busStopsData["53342"]} />
+      <ProgressCircle timeLeft={timeLeft} />
     </div>)
   }
 
