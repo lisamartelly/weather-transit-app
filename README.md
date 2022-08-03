@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Weather
+
+https://www.weather.gov/documentation/services-web-api
+to find grid info: https://api.weather.gov/points/44.9584,-93.2962
+example response (minneapolis): https://api.weather.gov/gridpoints/MPX/106,70/forecast
+
+
+### Transit (Minneapolis)
+
+https://www.metrotransit.org/stops-stations
+https://svc.metrotransit.org/nextrip
+https://svc.metrotransit.org/swagger/index.html
+
+
+
+
