@@ -58,12 +58,12 @@ function Transit() {
         clearInterval(interval)
       }
 
-      }, [timeLeft])
+      }, [timeLeft]) //eslint-disable-line react-hooks/exhaustive-deps
 
       // fetch departures on load
     useEffect(() => {
       fetchAllDepartures();
-    }, []);
+    }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
 
     return(<div>

@@ -35,7 +35,7 @@ function Weather() {
               return (
                 <div>
                   <h2>{weatherObj.name}</h2>
-                  <h3>Temperature: {weatherObj.temperature} {weatherObj.temperatureUnit} / {weatherObj.celsius} C</h3>
+                  <h3>Temperature: {weatherObj.temperature} F / {weatherObj.celsius} C</h3>
                   <p>{weatherObj.detailedForecast}</p>
                 </div>
                 )
