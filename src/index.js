@@ -6,11 +6,11 @@ import Transit from './Transit.js';
 function App() {
   return (
     <div className="App">
-      <header className="tab">
-        <Weather/>
-      </header>
-      <header className="tab">
+      <header className="tab" id="transitTab">
         <Transit/>
+      </header>
+      <header className="tab" id="weatherTab">
+        <Weather/>
       </header>
     </div>
   );

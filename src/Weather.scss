@@ -1,0 +1,46 @@
+.weatherSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.weatherForecast {
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+}
+
+.weatherHeader {
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0 1em;
+}
+
+.weatherHeader h2 {
+    margin-top:.5em;
+    margin-bottom: .5em;
+}
+
+.weatherDescription {
+    padding: 1em;
+}
+
+.timeInfo {
+    font-style: italic;
+    color:rgb(40, 40, 40);
+    font-size: small;
+}
+
+#queryTime {
+    margin-bottom: 1px;
+}
+
+#updateTime {
+    margin-top: 1px;
+}

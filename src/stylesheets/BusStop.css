@@ -1,0 +1,16 @@
+.BusStop {
+  display: flex;
+  flex-direction: row;
+  width: 33%;
+}
+
+.DepartureList {
+  width: 50%;
+}
+
+.busStopName {
+  background-color: #0077CC;
+  color: white;
+}
+
+/*# sourceMappingURL=BusStop.css.map */

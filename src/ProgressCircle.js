@@ -3,15 +3,15 @@ import "./ProgressBar.scss";
 function ProgressCircle(props) {
 
     const 
-        size = 150,
+        size = 60,
         timeLeft = props.timeLeft,
         trackWidth = 20,
         trackColor = `#ddd`,
         indicatorWidth = 20,
         indicatorColor = `#07c`,
-        indicatorCap = `round`,
-        label = `Time til refresh`,
-        labelColor = `#333`,
+        indicatorCap = `butt`,
+        label = ``,
+        labelColor = `black`,
         center = size / 2,
         radius = center - trackWidth,
         dashArray = 2 * Math.PI * radius,

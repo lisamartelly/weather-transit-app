@@ -1,10 +1,53 @@
-@import "App.css";
+@use 'variables' as main;
+
+.busStopBlock {
+    width: 28%;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    padding: 0px 15px;
+    margin: 0px 5px;
+}
 
 .BusStop {
     display:flex;
     flex-direction: row;
+    padding-bottom: 1em;
   }
 
 .DepartureList {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .departureListHeader {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+
+.busStopName {
+    background-color: rgb(2, 79, 134);
+    color: white;
+    text-align: center;
+    margin: 0px -15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: .5em 0%
+}
+
+.routeNumber {
+    background-color: rgb(202, 182, 30);
+    border-radius: 50%;
+    height: 2.3em;
+    width: 2.3em;
+    font-weight: bold;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.departureText {
+    padding-left: 1em;
+}
