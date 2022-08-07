@@ -8,12 +8,14 @@
 .weatherForecast {
     display:flex;
     flex-direction: column;
-    background-color: rgb(243, 243, 243);
+    background-color: rgba(243, 243, 243, 0.851);
     border-radius: 20px;
+    // box-shadow: rgba(255, 255, 255, 0.468) 0px 1px 4px;
+
 }
 
 .weatherHeader {
-    background-color: lightseagreen;
+    background-color: #00a6ed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,6 +27,7 @@
 .weatherHeader h2 {
     margin-top:.5em;
     margin-bottom: .5em;
+    color:rgb(0, 34, 70);
 }
 
 .weatherDescription {
@@ -33,7 +36,7 @@
 
 .timeInfo {
     font-style: italic;
-    color:rgb(40, 40, 40);
+    color: white;
     font-size: small;
 }
 

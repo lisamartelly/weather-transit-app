@@ -6,6 +6,7 @@
     border-radius: 20px;
     padding: 0px 15px;
     margin: 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .BusStop {
@@ -24,6 +25,9 @@
   .departureListHeader {
     margin-top: .5em;
     margin-bottom: .5em;
+    text-transform: uppercase;
+    font-size: medium;
+    color:rgb(40, 40, 40)
   }
 
 .busStopName {
@@ -37,7 +41,7 @@
 }
 
 .routeNumber {
-    background-color: rgb(202, 182, 30);
+    background-color: rgb(255, 200, 0);
     border-radius: 50%;
     height: 2.3em;
     width: 2.3em;
