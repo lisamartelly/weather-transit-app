@@ -1,73 +1,30 @@
-# Getting Started with Create React App
+# Minneapolis At-Home Transit and Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
-## Available Scripts
+![Dashboard Screenshot](/demo/transit-weather-ss.png "Dashboard Screenshot")
 
-In the project directory, you can run:
+This React app is a simple, at-home dashboard created to provide constant access to information that is immediately relevant to me and my family. Using an API from our regional transit service, it fetches and displays schedule and real-time ETA information at the 3 bus stops near my house. 
 
-### `npm start`
+Using a National Weather Service API, it also fetches and displays the most up-to-date forecast available for our "grid" (see more below).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Lastly, and perhaps the most useful feature in my house, since my husband speaks Celsius and I speak Fahrenheit, it does the temperature conversion for us :)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the Developer
 
-### `npm test`
+Lisa Murray is an emerging software engineer based in Minneapolis, MN. She previously worked in public health.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+This React app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). As a learning opportunity, SCSS was used, but it's honestly not really necessary for something as simple and commponentized as this.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Dashboard Updating in Action](/demo/transit-weather-gif.gif "Dashboard Updating in Action")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To avoid having to sit and stare at the app for 32 seconds wondering how recently it refreshed, there is a countdown circle corresponding with the fetch interval for the transit API. 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The weather data is refreshed less often from the NWS so it is not updated as often and does not have a corresponding countdown timer.
 
 ### Weather
 
@@ -81,6 +38,8 @@ example response (minneapolis): https://api.weather.gov/gridpoints/MPX/106,70/fo
 https://www.metrotransit.org/stops-stations
 https://svc.metrotransit.org/nextrip
 https://svc.metrotransit.org/swagger/index.html
+
+### Create React App
 
 
 
