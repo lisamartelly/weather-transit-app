@@ -1,54 +1,64 @@
-import { useState, useEffect } from 'react';
 
 function BusStop(props) {
-    const [actualDepartures, setActualDepartures] = useState([]);
-    const [scheduledDepartures, setScheduledDepartures] = useState([]);
-    const url=`https://svc.metrotransit.org/nextripv2/${props.stopId}`;
+
+    if (props.busStopData) {
+      const realTimeDepartures = props.busStopData.realTimeDepartures;
+      const scheduledDepartures = props.busStopData.scheduledDepartures;
+    
+      return(<div>
+        <h2>{props.stopName} </h2>
   
-    const fetchDepartures = async () => {
-      const response = await fetch(url);
-      const json = await response.json();
-      const tempActualDepartures = [];
-      const tempScheduledDepartures = [];
+        <div className="BusStop">
+        <div className="DepartureList">
+          
+          <h2>Real Time Departures:</h2>
   
+          { realTimeDepartures.length > 0 ? (
+          <table>
+              <tr>
+                <th>Route</th>
+                <th>ETA</th>
+              </tr>
+          {realTimeDepartures.map(function(realTimeDepartureObj) {
+                  return (
+                    <tr>
+                      <td>{realTimeDepartureObj.route_id} {realTimeDepartureObj.direction_text}</td> 
+                      <td>{realTimeDepartureObj.departure_text}</td>
+                    </tr>
+                    )
+                  })}
+            </table>
+           ) : ( "None incoming" )}
+          </div>
   
-      for (let i = 0; i < json.departures.length; i++) {
-        if (json.departures[i].actual) {
-          tempActualDepartures.push(json.departures[i])
-        } else {
-          tempScheduledDepartures.push(json.departures[i])
-        }
-      }
-    //   console.log("ACTUAL Departures: ");
-    //   console.log(tempActualDepartures);
-    //   console.log("SCHEDULED TRANSIT: ");
-    //   console.log(tempScheduledDepartures);
+          <div className="departureList">
+            <h2>Sheduled Departures:</h2>
   
-      setActualDepartures(tempActualDepartures);
-      setScheduledDepartures(tempScheduledDepartures);
-    };
-  
-    useEffect(() => {
-      fetchDepartures();
-    }, []);
-  
-    return(<div>
-      <h2>{props.stopName} </h2>
-      <h2>Real Time Departures:</h2>
-      {actualDepartures.map(function(actualDepartureObj) {
-              return (
-                <p>{actualDepartureObj.route_id} {actualDepartureObj.direction_text}: {actualDepartureObj.departure_text}</p>
-                )
-              })}
-        <div>
-        <h2>Sheduled Departures:</h2>
-        {scheduledDepartures.map(function(scheduledDepartureObj) {
-              return (
-                <p>{scheduledDepartureObj.route_id} {scheduledDepartureObj.direction_text}: {scheduledDepartureObj.departure_text}</p>
-                )
-              })}
-        </div>
-    </div>)
+            { scheduledDepartures.length > 0 ? (
+              <table>
+              <tr>
+                <th>Route</th>
+                <th>ETA</th>
+              </tr>
+            {scheduledDepartures.map(function(scheduledDepartureObj) {
+                  return (
+                    <tr>
+                      <td>{scheduledDepartureObj.route_id} {scheduledDepartureObj.direction_text}</td> 
+                      <td>{scheduledDepartureObj.departure_text}</td>
+                    </tr>
+                    )
+                  })}
+            </table>
+            ) : (
+              "None scheduled")}
+          </div>
+          </div>
+      </div>)
+    } else {
+      return(<div>
+        Loading...
+      </div>)
+    };    
   }
 
 export default BusStop;

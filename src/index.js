@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 import './App.scss';
 import Weather from './Weather.js';
