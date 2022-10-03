@@ -1,14 +1,14 @@
 
 import "./BusStop.scss";
 
-function BusStop(props) {
+function BusStop({busStopData, stopName}) {
 
-    if (props.busStopData) {
-      const realTimeDepartures = props.busStopData.realTimeDepartures;
-      const scheduledDepartures = props.busStopData.scheduledDepartures;
+    if (busStopData) {
+      const realTimeDepartures =busStopData.realTimeDepartures;
+      const scheduledDepartures = busStopData.scheduledDepartures;
     
       return(<div className="busStopBlock">
-        <h2 className ="busStopName"> {props.stopName} </h2>
+        <h2 className ="busStopName"> {stopName} </h2>
   
         <div className="BusStop">
         <div className="DepartureList realTimeDepartureList">

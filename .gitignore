@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+# compiled Sass stuff
+/stylesheets
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
