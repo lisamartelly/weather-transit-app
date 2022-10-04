@@ -1,15 +1,12 @@
-$accent-color: rgb(56, 191, 235);
-$dark-color: rgb(10, 46, 65);
-$background-color: rgb(221, 221, 221);
-
 
 body {
-  margin: 0;
+  margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -17,42 +14,23 @@ code {
     monospace;
 }
 
-.App, .BusStop {
+.App {
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.tab, .DepartureList {
-  width: 50%;
+.tab {
+  padding: 0em 2em 1em 2em;
+  margin:0;
 }
 
-// circle progress bar
-
-svg {
-  max-width: 100%;
-  vertical-align: middle;
+#transitTab {
+  background-color: #ddd;
+  height: 68vh;
 }
 
-.svg-indicator {
-  width: 100px;
-  height: 100px;
+#weatherTab {
+  background-color: rgb(0, 34, 70);
+  height: 32vh;
 }
-
-.svg-indicator-track,
-.svg-indicator-indication {
-  cx: 50px;
-  cy: 50px;
-  r: 40px;
-  fill: transparent;
-  stroke-width: 10px;
-}
-
-.svg-indicator-track {
-  stroke: #ddd;
-}
-
-.svg-indicator-indication {
-  stroke: #07c;
-}
-
 

@@ -1,86 +1,44 @@
-# Getting Started with Create React App
+# Minneapolis At-Home Transit and Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
-## Available Scripts
+![Dashboard Screenshot](/demo/transit-weather-ss.png "Dashboard Screenshot")
 
-In the project directory, you can run:
+This React app is a simple, at-home dashboard created to provide constant access to information that is immediately relevant to the developer and her family. 
 
-### `npm start`
+Using an API from a regional transit service, it fetches and displays schedule and real-time ETA information at the 3 bus stops near the developer's house. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Using a National Weather Service (NWS) API, it also fetches and displays the most up-to-date forecast available for their weather "grid" (see more below).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the Developer
 
-### `npm test`
+Lisa Murray is an emerging software engineer based in Minneapolis, MN. She previously worked in public health. She fully designed and developed this dashboard herself. The project received review from her husband, a key stakeholder in this project and fellow software engineer. It will soon be run 24/7 on a Raspberry Pi that is mounted to a monitor, and hung by their front door.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+This React app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). As a learning opportunity, SCSS was used, but it honestly was not really necessary for something as simple and already-commponentized as this.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Dashboard Updating in Action](/demo/transit-weather-gif.gif "Dashboard Updating in Action")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To avoid having to sit and stare at the app for up to 32 seconds wondering how recently it refreshed, there is a countdown circle corresponding with the fetch interval for the transit API. 
 
-### `npm run eject`
+The weather data is refreshed less often from the NWS so, accordingly, it is not updated as often on the app, and does not have a corresponding countdown timer. It does display the time that the NWS most recently updated the forecast.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Lastly, and perhaps the most delightful feature (at least in the developer's house): since she speaks Fahrenheit but her husband speaks Celsius, the app does the temperature conversion for them :)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Weather API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Weather
-
-https://www.weather.gov/documentation/services-web-api
-to find grid info: https://api.weather.gov/points/44.9584,-93.2962
-example response (minneapolis): https://api.weather.gov/gridpoints/MPX/106,70/forecast
+This app uses data from the [National Weather Service](https://www.weather.gov/documentation/services-web-api)
+To use it you will need to first [identify which grid you're in with your lat/long coordinates](https://api.weather.gov/points/44.9584,-93.2962). Here is an
+example API call for the grid my home is in in Minneapolis: https://api.weather.gov/gridpoints/MPX/106,70/forecast
 
 
 ### Transit (Minneapolis)
 
-https://www.metrotransit.org/stops-stations
-https://svc.metrotransit.org/nextrip
-https://svc.metrotransit.org/swagger/index.html
+This app uses the Nextrip API from Metro Transit (the Twin Cities transit agency). It uses stop numbers which can be found [here](https://www.metrotransit.org/stops-stations), and displays up to 6 upcoming departures for each stop (both real-time and scheduled). More documentation and other APIs are available from [Metro Transit](https://svc.metrotransit.org/nextrip). 
+
 
 
 

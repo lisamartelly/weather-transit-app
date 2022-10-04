@@ -1,0 +1,16 @@
+// @use variables as main;
+
+.transitSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.sectionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

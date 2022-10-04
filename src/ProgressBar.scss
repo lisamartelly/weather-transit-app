@@ -1,0 +1,31 @@
+
+.svg-progress-circle-wrapper {
+    position: relative;
+  }
+  
+  .svg-progress-circle {
+    transform: rotate(-90deg); /* Fix the orientation */
+  }
+  
+  .svg-progress-circle-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .svg-progress-circle-label__loading {
+    // opacity: .5;
+    font-size: 0.75em;
+  }
+  
+  .svg-progress-circle-label__progress {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .svg-progress-circle-label__loading,
+  .svg-progress-circle-label__progress {
+    display: block;
+  }
