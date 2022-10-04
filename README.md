@@ -2,7 +2,7 @@
 
 ## Summary
 
-![Dashboard Screenshot](/demo/transit-weather-ss.png "Dashboard Screenshot")
+![Dashboard Screenshot](src/demo/transit-weather-ss.png "Dashboard Screenshot")
 
 This React app is a simple, at-home dashboard created to provide constant access to information that is immediately relevant to the developer and her family. 
 
@@ -16,11 +16,11 @@ Lisa Murray is an emerging software engineer based in Minneapolis, MN. She previ
 
 ## Tech Stack
 
-This React app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). As a learning opportunity, SCSS was used, but it honestly was not really necessary for something as simple and already-commponentized as this.
+This React app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). As a learning opportunity, SCSS was used, but it honestly was not really necessary for something as simple and already-componentized as this.
 
 ## Features
 
-![Dashboard Updating in Action](/demo/transit-weather-gif.gif "Dashboard Updating in Action")
+![Dashboard Updating in Action](src/demo/transit-weather-gif.gif "Dashboard Updating in Action")
 
 To avoid having to sit and stare at the app for up to 32 seconds wondering how recently it refreshed, there is a countdown circle corresponding with the fetch interval for the transit API. 
 
