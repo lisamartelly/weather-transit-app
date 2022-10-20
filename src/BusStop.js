@@ -1,6 +1,7 @@
 
 import "./BusStop.scss";
 
+
 function BusStop({busStopData, stopName}) {
 
     if (busStopData) {
