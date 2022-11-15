@@ -7,6 +7,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 code {
@@ -17,20 +21,40 @@ code {
 .App {
   display:flex;
   flex-direction: column;
+  max-height: 400px;
+  max-width: 800px;
 }
 
+h2 {
+  font-size: 1rem;
+}
+
+
+
 .tab {
-  padding: 0em 2em 1em 2em;
+  padding: 0rem 1rem;
   margin:0;
 }
 
 #transitTab {
   background-color: #ddd;
-  height: 68vh;
+  height: calc(400px * .7);
 }
 
 #weatherTab {
   background-color: rgb(0, 34, 70);
-  height: 32vh;
+  height: calc(400px * .3);
+  display: flex;
+  align-items: center;
+}
+
+.modal-overlay {
+  background-color: gray;
+  position:absolute;
+  z-index: 1;
+}
+
+.hidden {
+  display: none
 }
 

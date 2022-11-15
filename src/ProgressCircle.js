@@ -3,10 +3,10 @@ import "./ProgressBar.scss";
 function ProgressCircle({ timeLeft }) {
 
     const 
-        size = 60,
-        trackWidth = 20,
+        size = 30,
+        trackWidth = 10,
         trackColor = `#ddd`,
-        indicatorWidth = 20,
+        indicatorWidth = 10,
         indicatorColor = `#07c`,
         indicatorCap = `butt`,
         label = ``,

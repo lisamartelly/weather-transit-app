@@ -12,7 +12,7 @@
 .BusStop {
     display:flex;
     flex-direction: row;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
   }
 
 .DepartureList {
@@ -23,10 +23,10 @@
   }
 
   .departureListHeader {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
     text-transform: uppercase;
-    font-size: medium;
+    font-size: .7rem;
     color:rgb(40, 40, 40)
   }
 
@@ -37,14 +37,14 @@
     margin: 0px -15px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: .5em 0%
+    padding: .3rem 0%
 }
 
 .routeNumber {
     background-color: rgb(255, 200, 0);
-    border-radius: 50%;
-    height: 2.3em;
-    width: 2.3em;
+    border-radius: 3px;
+    height: 1.3rem;
+    width: 2.4rem;
     font-weight: bold;
     margin: 0px;
     display: flex;
@@ -52,6 +52,14 @@
     align-items: center;
 }
 
+td p {
+  font-size: .9rem;
+}
+
+td.departureText {
+  font-size: .7rem;
+}
+
 .departureText {
-    padding-left: 1em;
+    padding-left: .5rem;
 }
