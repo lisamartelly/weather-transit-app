@@ -42,7 +42,7 @@ function Weather() {
       {weather.map(function(weatherObj, index) {
               let id = `weather-${index}`;
               return (
-                <div className='weatherForecast' id={id}>
+                <div className='weatherForecast' id={id} key={id}>
                   <div className='weatherHeader'>
                     <h2>{weatherObj.name}:</h2>
                     <h2>{weatherObj.temperature} F / {weatherObj.celsius} C</h2>

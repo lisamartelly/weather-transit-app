@@ -1,17 +1,21 @@
 import ReactDOM from 'react-dom/client';
 import './App.scss';
+import InfoModal from './InfoModal.js';
 import Weather from './Weather.js';
 import Transit from './Transit.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="tab" id="transitTab">
-        <Transit/>
-      </header>
-      <header className="tab" id="weatherTab">
-        <Weather/>
-      </header>
+      <InfoModal/>
+      
+        <header className="tab" id="transitTab">
+          <Transit/>
+        </header>
+        <header className="tab" id="weatherTab">
+          <Weather/>
+        </header>
+      
     </div>
   );
 }

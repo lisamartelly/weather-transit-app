@@ -17,14 +17,16 @@ function BusStop({busStopData, stopName}) {
   
           { realTimeDepartures.length > 0 ? (
           <table>
-          {realTimeDepartures.map(function(realTimeDepartureObj) {
+            <tbody>
+          {realTimeDepartures.map(function(realTimeDepartureObj, index) {
                   return (
-                    <tr>
+                    <tr key={index}>
                       <td> <p className="routeNumber">{realTimeDepartureObj.route_id}{realTimeDepartureObj.terminal}</p> </td> 
                       <td className="departureText">{realTimeDepartureObj.departure_text}</td>
                     </tr>
                     )
                   })}
+              </tbody>
             </table>
            ) : ( "None incoming" )}
           </div>
@@ -34,14 +36,16 @@ function BusStop({busStopData, stopName}) {
   
             { scheduledDepartures.length > 0 ? (
               <table>
-            {scheduledDepartures.map(function(scheduledDepartureObj) {
+                <tbody>
+            {scheduledDepartures.map(function(scheduledDepartureObj, index) {
                   return (
-                    <tr>
+                    <tr key={index}>
                       <td><p className="routeNumber">{scheduledDepartureObj.route_id}{scheduledDepartureObj.terminal}</p> </td> 
                       <td className="departureText">{scheduledDepartureObj.departure_text}</td>
                     </tr>
                     )
                   })}
+              </tbody>
             </table>
             ) : (
               "None scheduled")}

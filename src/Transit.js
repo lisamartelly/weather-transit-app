@@ -75,7 +75,7 @@ function Transit() {
 
 
     return(<div>
-      <div class="sectionHeader">
+      <div className="sectionHeader">
         <h2>🚌.....🚌🚌.....🚌....🚌...🚌..🚌.....🚌.....🚌....🚌...🚌🚌.....🚌....🚌</h2>
         <ProgressCircle timeLeft={timeLeft} />
       </div>
